@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34729.46
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormationSAP", "Formation\FormationSAP.btproj", "{22E80F30-CB54-4E61-8581-4EA7C433369C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormationPipeline", "FormationPipeline\FormationPipeline.btproj", "{DDD28044-E1E6-4719-98A5-17F88DCDCAF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22E80F30-CB54-4E61-8581-4EA7C433369C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E80F30-CB54-4E61-8581-4EA7C433369C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E80F30-CB54-4E61-8581-4EA7C433369C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{22E80F30-CB54-4E61-8581-4EA7C433369C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E80F30-CB54-4E61-8581-4EA7C433369C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E80F30-CB54-4E61-8581-4EA7C433369C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DDD28044-E1E6-4719-98A5-17F88DCDCAF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD28044-E1E6-4719-98A5-17F88DCDCAF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD28044-E1E6-4719-98A5-17F88DCDCAF5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DDD28044-E1E6-4719-98A5-17F88DCDCAF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD28044-E1E6-4719-98A5-17F88DCDCAF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD28044-E1E6-4719-98A5-17F88DCDCAF5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F39075FE-BA51-4207-BAC6-BFE5B165AA79}
+	EndGlobalSection
+EndGlobal
