@@ -1,0 +1,217 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="e310f2e9-aedf-4d1e-8ac1-6df206e44e02" LowerBound="1.1" HigherBound="37.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Formation" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="5c06739b-8728-4afe-a2e3-fe09ea4952ad" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_StockRequest" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="3244b18a-9d6f-42c5-a6c4-139f00d7d781" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_StockRequest" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="e12c9a78-edda-4fa3-b5d2-485aa7030090" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.32">
+                    <om:Property Name="Ref" Value="Formation.Schema.StockRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="bef827e7-7717-4cc2-acd4-f305ca4400e4" ParentLink="Module_ServiceDeclaration" LowerBound="15.1" HigherBound="36.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="StockOrchestration" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="664abb2b-aedf-4b85-8f5d-00142231b6ca" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="nbProducts" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="02812fa9-b801-43a7-9186-800c295942d0" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="24.1" HigherBound="25.1">
+                <om:Property Name="InitialValue" Value="1" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="index" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="CorrelationDeclaration" OID="69d6e594-75a3-4991-92e2-cf0e3d50555d" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="Type" Value="Formation.CorrelationType_1" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Correlation_1" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="2867b703-351f-486f-9842-ea4eed130c3c" ParentLink="CorrelationDeclaration_StatementRef">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="4e24da8a-d860-42bb-a8b6-86fc6dafcd41" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="abf1cd9d-9d82-4d3c-a151-6c9d9b8ed401" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="Type" Value="Formation.Schema.StockRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Msg_StockRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="2f1f501c-a087-4f6e-973f-7f8eb719e996" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="Type" Value="Formation.Schema.StockRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Msg_RequestUnit" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="bb120422-de4c-4d59-83c7-026e6ddc8ebd" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="fff931b4-97aa-447a-9d5a-fed0b081e391" ParentLink="ServiceBody_Statement" LowerBound="27.1" HigherBound="30.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_StockRequest" />
+                    <om:Property Name="MessageName" Value="Msg_StockRequest" />
+                    <om:Property Name="OperationName" Value="Operation_StockRequest" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_MsgIn" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="dbbc4587-346e-4107-a502-0d3d612786e6" ParentLink="ServiceBody_Statement" LowerBound="30.1" HigherBound="32.1">
+                    <om:Property Name="Expression" Value="nbProducts = xpath(Msg_StockRequest, &quot;count(/*[local-name()='StockRequest' and namespace-uri()='http://middleway.fr/formation/pivot']/*[local-name()='Produits' and namespace-uri()='']/*[local-name()='Produit' and namespace-uri()=''])&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="GetNumberProduct" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="While" OID="367bafd1-600f-46e3-8170-bb6fa280c9ca" ParentLink="ServiceBody_Statement" LowerBound="32.1" HigherBound="34.1">
+                    <om:Property Name="Expression" Value="index &lt;= nbProducts" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Loop_1" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="Task" OID="22ebe902-aaf0-478c-b6bf-bc5cba0086a1" ParentLink="ComplexStatement_Statement">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Group_1" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="dbd3028b-3613-4c72-95f3-905736db5496" ParentLink="ComplexStatement_Statement">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructMessage_1" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Transform" OID="f3ea41b1-6d95-4736-aac0-445bd9d12194" ParentLink="ComplexStatement_Statement">
+                                <om:Property Name="ClassName" Value="Formation.Map.StockRequestToUnit" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_1" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="948520f8-ef60-4e11-80d1-2f2331632cc2" ParentLink="Transform_InputMessagePartRef">
+                                    <om:Property Name="MessageRef" Value="Msg_StockRequest" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="7f16d20c-73c1-462b-9789-1957ccdd1e54" ParentLink="Transform_OutputMessagePartRef">
+                                    <om:Property Name="MessageRef" Value="Msg_RequestUnit" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="21823321-383d-4fd5-85d6-069094c485ef" ParentLink="Construct_MessageRef">
+                                <om:Property Name="Ref" Value="Msg_RequestUnit" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="4e24da8a-d860-42bb-a8b6-86fc6dafcd41" ParentLink="ComplexStatement_Statement">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_1" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="VariableAssignment" OID="23456fd2-c09f-42bd-b11e-aa987104084b" ParentLink="ComplexStatement_Statement">
+                        <om:Property Name="Expression" Value="index = index + 1;" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="index++" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="9b5da6a8-88db-4dd5-88e1-c24601385638" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="18.1" HigherBound="20.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Formation.PortType_StockRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_StockRequest" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="4a5e8bc2-e638-4069-97e8-a6be67612cac" ParentLink="PortDeclaration_CLRAttribute" LowerBound="18.1" HigherBound="19.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="CorrelationType" OID="15865ce0-bf6d-4311-86ba-6c3500fd0919" ParentLink="Module_CorrelationType" LowerBound="11.1" HigherBound="15.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CorrelationType_1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PropertyRef" OID="c2482c13-0db7-4a5e-bad6-2b1f846f9e3a" ParentLink="CorrelationType_PropertyRef" LowerBound="13.9" HigherBound="13.30">
+                <om:Property Name="Ref" Value="Formation.Schema.stockRequestId" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Formation
+{
+    internal porttype PortType_StockRequest
+    {
+        oneway Operation_StockRequest
+        {
+            Schema.StockRequest
+        };
+    };
+    internal correlationtype CorrelationType_1
+    {
+        Schema.stockRequestId
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service StockOrchestration
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_StockRequest Port_StockRequest;
+        correlation CorrelationType_1 Correlation_1;
+        message Schema.StockRequest Msg_StockRequest;
+        message Schema.StockRequest Msg_RequestUnit;
+        System.Int32 nbProducts;
+        System.Int32 index;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fff931b4-97aa-447a-9d5a-fed0b081e391")]
+            activate receive (Port_StockRequest.Operation_StockRequest, Msg_StockRequest);
+            index = 1;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("dbbc4587-346e-4107-a502-0d3d612786e6")]
+            nbProducts = xpath(Msg_StockRequest, "count(/*[local-name()='StockRequest' and namespace-uri()='http://middleway.fr/formation/pivot']/*[local-name()='Produits' and namespace-uri()='']/*[local-name()='Produit' and namespace-uri()=''])");
+
+#error "Errors exist for one or more children."
+        }
+    }
+}
+

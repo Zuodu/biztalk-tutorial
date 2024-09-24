@@ -1,0 +1,457 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="bf85254d-ef55-49c0-b36f-99d33a21b77b" LowerBound="1.1" HigherBound="102.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Formation" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="ac58d225-dee6-413e-b622-ffa5301269d8" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_Direct" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="86eb7e6f-634e-4477-82df-71017f1dee83" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_RcvPortOrderPivot" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="25039d8f-3fcd-4094-ab29-1337e0e0a3a8" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.28">
+                    <om:Property Name="Ref" Value="Formation.Schema.OrderSAP" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="76cab88c-cb5a-42f2-92be-00d17763049b" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_SendOrderPivot" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="160e6ff1-3381-4316-afcd-e9309db38e7f" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_SndOrderPivot" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="7842d8b3-cfbe-45c5-8369-afc555f6498a" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.30">
+                    <om:Property Name="Ref" Value="Formation.Schema.OrderPivot" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="280790e1-2476-4ff5-a713-1a78510655a2" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_OrderAck" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="2962cabf-f614-4934-b1e5-7a91b1b28922" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_SndAck" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="aca16440-7b58-4f42-ba38-2af1b6350bf7" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.28">
+                    <om:Property Name="Ref" Value="Formation.Schema.OrderAck" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="b0dd8dd5-4228-4bef-b4d8-199f700dd2d2" ParentLink="Module_PortType" LowerBound="25.1" HigherBound="32.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_Dynamic" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="374469e6-c644-4cad-ad17-108437ce1176" ParentLink="PortType_OperationDeclaration" LowerBound="27.1" HigherBound="31.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_SndAckDyn" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="6615340d-afde-4736-84cf-20c6a74d29c7" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="29.13" HigherBound="29.28">
+                    <om:Property Name="Ref" Value="Formation.Schema.OrderAck" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="87188b9a-6a86-4d38-8164-03c0f22af809" ParentLink="Module_PortType" LowerBound="32.1" HigherBound="39.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_SndDirect" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="769d95df-b604-49a9-a77f-3fda059ec1ad" ParentLink="PortType_OperationDeclaration" LowerBound="34.1" HigherBound="38.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_SendOrderDirect" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="7972d1d1-4dff-4fd1-aa59-f08ed8d7b063" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="36.13" HigherBound="36.30">
+                    <om:Property Name="Ref" Value="Formation.Schema.OrderPivot" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="cacb97f6-c4b1-4fd2-bb23-dbc75b045447" ParentLink="Module_ServiceDeclaration" LowerBound="39.1" HigherBound="101.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="FormationOrchestration" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="5c07157d-6cfb-4725-b1ce-4da3232f361c" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="56.1" HigherBound="57.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Order_Id" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="f90ba057-efa1-474e-a68d-b4ff5e159ab1" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="53.1" HigherBound="54.1">
+                <om:Property Name="Type" Value="Formation.Schema.OrderPivot" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Msg_OrderPivot" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="8c2ab8b7-ce65-42c9-91dc-a99f4a2b1712" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="54.1" HigherBound="55.1">
+                <om:Property Name="Type" Value="Formation.Schema.OrderSAP" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Msg_OrderSAP" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="da71f69f-35a7-4f91-bbaa-b63c115939ce" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="55.1" HigherBound="56.1">
+                <om:Property Name="Type" Value="Formation.Schema.OrderAck" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Msg_OrderAck" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="726f25f4-58b7-4667-bb30-dc92290120a1" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="a0ab47d4-a890-46a3-89dd-fc947bd0e661" ParentLink="ServiceBody_Statement" LowerBound="59.1" HigherBound="62.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Receive_OrderPivot" />
+                    <om:Property Name="MessageName" Value="Msg_OrderSAP" />
+                    <om:Property Name="OperationName" Value="Operation_RcvPortOrderPivot" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_OrderSAP" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="6fa854b4-0191-4774-8fac-b77958659f33" ParentLink="ServiceBody_Statement" LowerBound="62.1" HigherBound="64.1">
+                    <om:Property Name="Expression" Value="Order_Id = Msg_OrderSAP.OrderId;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SetVar" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Scope" OID="5cc4b315-b845-4f84-9996-cb27b6776c4b" ParentLink="ServiceBody_Statement" LowerBound="64.1" HigherBound="99.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Scope_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Construct" OID="7b9513e0-6794-44c7-abe7-d53cb89de87a" ParentLink="ComplexStatement_Statement" LowerBound="69.1" HigherBound="75.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ConstructMessage" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Transform" OID="fbd8a51f-033e-4158-a6a2-a6fe40995695" ParentLink="ComplexStatement_Statement" LowerBound="72.1" HigherBound="74.1">
+                            <om:Property Name="ClassName" Value="Formation.Map.OrderSAPToPivot" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Tsfm_ToPivot" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessagePartRef" OID="cd2119bd-bc2e-468c-b5c8-9ebe3a93c19a" ParentLink="Transform_InputMessagePartRef" LowerBound="73.85" HigherBound="73.97">
+                                <om:Property Name="MessageRef" Value="Msg_OrderSAP" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_1" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessagePartRef" OID="99e943ee-0d56-4708-9519-2d090a350ffd" ParentLink="Transform_OutputMessagePartRef" LowerBound="73.36" HigherBound="73.50">
+                                <om:Property Name="MessageRef" Value="Msg_OrderPivot" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_2" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="e3b2de8f-91e1-4674-8426-4a8c959828af" ParentLink="Construct_MessageRef" LowerBound="70.31" HigherBound="70.45">
+                            <om:Property Name="Ref" Value="Msg_OrderPivot" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Send" OID="47ccf8a9-4558-485c-b769-3a9e9a397d67" ParentLink="ComplexStatement_Statement" LowerBound="75.1" HigherBound="77.1">
+                        <om:Property Name="PortName" Value="Send_Direct" />
+                        <om:Property Name="MessageName" Value="Msg_OrderPivot" />
+                        <om:Property Name="OperationName" Value="Operation_SendOrderDirect" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Send_OrderPivot" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Construct" OID="0d6f1068-2454-47da-9ff0-ce5f09dc0ce5" ParentLink="ComplexStatement_Statement" LowerBound="77.1" HigherBound="86.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ConstructAck" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Transform" OID="fc63b0ab-ffc5-4538-a718-7a9c36077f33" ParentLink="ComplexStatement_Statement" LowerBound="80.1" HigherBound="82.1">
+                            <om:Property Name="ClassName" Value="Formation.Map.OrderPivotToAck" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Tsfm_ToAck" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="MessagePartRef" OID="9e8b1ea7-4496-4613-bf52-cba94a17b57a" ParentLink="Transform_InputMessagePartRef" LowerBound="81.83" HigherBound="81.95">
+                                <om:Property Name="MessageRef" Value="Msg_OrderSAP" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_3" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessagePartRef" OID="32f4a5e4-8851-4f20-b7fd-5a6664e99247" ParentLink="Transform_OutputMessagePartRef" LowerBound="81.36" HigherBound="81.48">
+                                <om:Property Name="MessageRef" Value="Msg_OrderAck" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_4" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="MessageAssignment" OID="ba0b5585-7750-4a5c-b2bd-ccfdccf37703" ParentLink="ComplexStatement_Statement" LowerBound="82.1" HigherBound="85.1">
+                            <om:Property Name="Expression" Value="Send_DynamicAck(Microsoft.XLANGs.BaseTypes.Address) = Msg_OrderSAP.ResponseClient;&#xD;&#xA;Send_DynamicAck(Microsoft.XLANGs.BaseTypes.TransportType) = &quot;FILE&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="False" />
+                            <om:Property Name="Name" Value="Assign_ResponseClient" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="b5a484d8-2df0-4715-ab41-416fa25a2f4d" ParentLink="Construct_MessageRef" LowerBound="78.31" HigherBound="78.43">
+                            <om:Property Name="Ref" Value="Msg_OrderAck" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="Send" OID="8507cb7c-0573-4872-8fd4-44d2f84b6414" ParentLink="ComplexStatement_Statement" LowerBound="86.1" HigherBound="88.1">
+                        <om:Property Name="PortName" Value="Send_DynamicAck" />
+                        <om:Property Name="MessageName" Value="Msg_OrderAck" />
+                        <om:Property Name="OperationName" Value="Operation_SndAckDyn" />
+                        <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Send_ToAck" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="Catch" OID="495fe649-750d-411c-9a04-07c9b6b3c4f8" ParentLink="Scope_Catch" LowerBound="91.1" HigherBound="97.1">
+                        <om:Property Name="ExceptionType" Value="General Exception" />
+                        <om:Property Name="IsFaultMessage" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="CatchException_1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Call" OID="1a543446-e810-4d36-af40-c269d59a415d" ParentLink="Catch_Statement" LowerBound="94.1" HigherBound="96.1">
+                            <om:Property Name="Identifier" Value="CallOrchestration_1" />
+                            <om:Property Name="Invokee" Value="Formation.OrderErrorHandler" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="CallOrchestration_1" />
+                            <om:Property Name="Signal" Value="False" />
+                            <om:Element Type="Parameter" OID="1b42dc88-611d-4745-b4b5-a3de33cd08cb" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="Order_Id" />
+                                <om:Property Name="Type" Value="System.String" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="6a44f2ea-7b60-4696-9ffe-e6233cd682ee" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="42.1" HigherBound="44.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Formation.PortType_Direct" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Receive_OrderPivot" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="6c6225f7-4d2f-4b90-b384-2179934a929d" ParentLink="PortDeclaration_CLRAttribute" LowerBound="42.1" HigherBound="43.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="65ac7229-51db-4aac-8456-9ceae373beb3" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="44.1" HigherBound="47.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="Transmitted" />
+                <om:Property Name="Type" Value="Formation.PortType_SendOrderPivot" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Send_OrderPivot" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="12393c61-c6f7-4d27-ae3c-595dfacee809" ParentLink="PortDeclaration_CLRAttribute" LowerBound="44.1" HigherBound="45.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="12254617-bca7-43b5-965e-e5944fd648ab" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="47.1" HigherBound="49.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Formation.PortType_OrderAck" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Send_OrderAck" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="fd0c30a3-d611-4e37-bfa8-4e5b8de92fa9" ParentLink="PortDeclaration_CLRAttribute" LowerBound="47.1" HigherBound="48.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="be83879a-4a72-44a5-b917-d59c8bbbbc16" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="49.1" HigherBound="51.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Formation.PortType_Dynamic" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Send_DynamicAck" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="b09c77ad-fbf9-4527-ac65-7002d99eaecc" ParentLink="PortDeclaration_CLRAttribute" LowerBound="49.1" HigherBound="50.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" />
+                    <om:Property Name="TransportType" Value="HTTP" />
+                    <om:Property Name="URI" Value="http://tempURI" />
+                    <om:Property Name="IsDynamic" Value="True" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="dbbaa89e-c1da-4470-bf4d-d8984421d713" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="51.1" HigherBound="53.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Formation.PortType_SndDirect" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Send_Direct" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="DirectBindingAttribute" OID="05f1a3aa-4bb9-4168-b546-58ae02e3591a" ParentLink="PortDeclaration_CLRAttribute" LowerBound="51.1" HigherBound="52.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Formation
+{
+    internal porttype PortType_Direct
+    {
+        oneway Operation_RcvPortOrderPivot
+        {
+            Schema.OrderSAP
+        };
+    };
+    internal porttype PortType_SendOrderPivot
+    {
+        oneway Operation_SndOrderPivot
+        {
+            Schema.OrderPivot
+        };
+    };
+    internal porttype PortType_OrderAck
+    {
+        oneway Operation_SndAck
+        {
+            Schema.OrderAck
+        };
+    };
+    internal porttype PortType_Dynamic
+    {
+        oneway Operation_SndAckDyn
+        {
+            Schema.OrderAck
+        };
+    };
+    internal porttype PortType_SndDirect
+    {
+        oneway Operation_SendOrderDirect
+        {
+            Schema.OrderPivot
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service FormationOrchestration
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_Direct Receive_OrderPivot;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        [Microsoft.XLANGs.BaseTypes.DeliveryNotification(Microsoft.XLANGs.BaseTypes.DeliveryNotification.NotificationLevel.Transmitted)]
+        port uses PortType_SendOrderPivot Send_OrderPivot;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_OrderAck Send_OrderAck;
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding(typeof(Microsoft.BizTalk.DefaultPipelines.PassThruTransmit))]
+        port uses dynamic PortType_Dynamic Send_DynamicAck;
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses PortType_SndDirect Send_Direct;
+        message Schema.OrderPivot Msg_OrderPivot;
+        message Schema.OrderSAP Msg_OrderSAP;
+        message Schema.OrderAck Msg_OrderAck;
+        System.String Order_Id;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a0ab47d4-a890-46a3-89dd-fc947bd0e661")]
+            activate receive (Receive_OrderPivot.Operation_RcvPortOrderPivot, Msg_OrderSAP);
+            Order_Id = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6fa854b4-0191-4774-8fac-b77958659f33")]
+            Order_Id = Msg_OrderSAP.OrderId;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5cc4b315-b845-4f84-9996-cb27b6776c4b")]
+            scope
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("7b9513e0-6794-44c7-abe7-d53cb89de87a")]
+                    construct Msg_OrderPivot
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("fbd8a51f-033e-4158-a6a2-a6fe40995695")]
+                        transform (Msg_OrderPivot) = Formation.Map.OrderSAPToPivot (Msg_OrderSAP);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("47ccf8a9-4558-485c-b769-3a9e9a397d67")]
+                    send (Send_Direct.Operation_SendOrderDirect, Msg_OrderPivot);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("0d6f1068-2454-47da-9ff0-ce5f09dc0ce5")]
+                    construct Msg_OrderAck
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("fc63b0ab-ffc5-4538-a718-7a9c36077f33")]
+                        transform (Msg_OrderAck) = Formation.Map.OrderPivotToAck (Msg_OrderSAP);
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("ba0b5585-7750-4a5c-b2bd-ccfdccf37703")]
+                        Send_DynamicAck(Microsoft.XLANGs.BaseTypes.Address) = Msg_OrderSAP.ResponseClient;
+                        Send_DynamicAck(Microsoft.XLANGs.BaseTypes.TransportType) = "FILE";
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("8507cb7c-0573-4872-8fd4-44d2f84b6414")]
+                    send (Send_DynamicAck.Operation_SndAckDyn, Msg_OrderAck);
+                }
+                exceptions
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("495fe649-750d-411c-9a04-07c9b6b3c4f8")]
+                    catch
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("1a543446-e810-4d36-af40-c269d59a415d")]
+                        call Formation.OrderErrorHandler (Order_Id);
+                    }
+                }
+            }
+        }
+    }
+}
+

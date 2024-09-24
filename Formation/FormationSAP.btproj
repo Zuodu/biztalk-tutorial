@@ -96,6 +96,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FormationKey.snk" />
+    <Schema Include="Schema\OrderConfirmation.xsd">
+      <TypeName>OrderConfirmation</TypeName>
+      <Namespace>Formation.Schema</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\StockProperty.xsd">
+      <TypeName>StockProperty</TypeName>
+      <Namespace>Formation.Schema</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\StockResponse.xsd">
+      <TypeName>StockResponse</TypeName>
+      <Namespace>Formation.Schema</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\StockRequest.xsd">
+      <TypeName>StockRequest</TypeName>
+      <Namespace>Formation.Schema</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\OrderAck.xsd">
+      <TypeName>OrderAck</TypeName>
+      <Namespace>Formation.Schema</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <Schema Include="Schema\OrderPivot.xsd">
       <SubType>Task</SubType>
       <TypeName>OrderPivot</TypeName>
@@ -120,6 +145,21 @@
     </Map>
   </ItemGroup>
   <ItemGroup>
+    <Map Include="Map\StockRequestToUnit.btm">
+      <TypeName>StockRequestToUnit</TypeName>
+      <Namespace>Formation.Map</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <XLang Include="Orchestration\OrderErrorHandler.odx">
+      <TypeName>OrderErrorHandler</TypeName>
+      <Namespace>Formation.Orchestration</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <Map Include="Map\OrderSAPToAck.btm">
+      <TypeName>OrderPivotToAck</TypeName>
+      <Namespace>Formation.Map</Namespace>
+      <SubType>Task</SubType>
+    </Map>
     <Content Include="Map\OrderSAPToPivot.xsl" />
     <XLang Include="Orchestration\FormationOrchestration.odx">
       <TypeName>FormationOrchestration</TypeName>
